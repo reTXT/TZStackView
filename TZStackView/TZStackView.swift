@@ -60,7 +60,7 @@ public class TZStackView: UIView {
     
     private var animatingToHiddenViews = [UIView]()
 
-    public init(arrangedSubviews: [UIView] = []) {
+    public required init(arrangedSubviews: [UIView] = []) {
         super.init(frame: CGRectZero)
         for arrangedSubview in arrangedSubviews {
             arrangedSubview.translatesAutoresizingMaskIntoConstraints = false

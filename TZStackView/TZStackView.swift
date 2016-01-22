@@ -17,6 +17,7 @@ func ==(lhs: TZAnimationDidStopQueueEntry, rhs: TZAnimationDidStopQueueEntry) ->
     return lhs.view === rhs.view
 }
 
+@objc(TZStackView)
 public class TZStackView: UIView {
 
     public var distribution: TZStackViewDistribution = .Fill {
@@ -59,7 +60,7 @@ public class TZStackView: UIView {
     
     private var animatingToHiddenViews = [UIView]()
 
-    public init(arrangedSubviews: [UIView] = []) {
+    public required init(arrangedSubviews: [UIView] = []) {
         super.init(frame: CGRectZero)
         for arrangedSubview in arrangedSubviews {
             arrangedSubview.translatesAutoresizingMaskIntoConstraints = false
